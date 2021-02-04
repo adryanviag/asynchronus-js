@@ -1,3 +1,3 @@
 # LEARN Asynchronus JS
 
-#11 Async & Await
+#12 Throwing Errors
