@@ -1,3 +1,3 @@
 # LEARN Asynchronus JS
 
-#7 Callbacks Hell
+#8 Promises
