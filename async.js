@@ -1,9 +1,12 @@
-console.log("1");
-console.log("2");
+const request = new XMLHttpRequest();
+const uriapi = "https://jsonplaceholder.typicode.com/todos/";
 
-setTimeout(() => {
-  console.log("callback triggered");
-}, 3000);
+request.addEventListener("readystatechange", () => {
+  //   console.log(request, request.readyState);
+  if (request.readyState === 4) {
+    console.log(request.responseText);
+  }
+});
 
-console.log("3");
-console.log("4");
+request.open("GET", uriapi);
+request.send();
