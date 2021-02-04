@@ -1,3 +1,3 @@
 # LEARN Asynchronus JS
 
-#8 Promises
+#9 Chaining Promises

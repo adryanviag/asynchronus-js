@@ -17,27 +17,15 @@ const getTodos = (resource) => {
 };
 
 getTodos("todos/adryan.json")
-  .then((data) => console.log("promise resolved: ", data))
+  .then((data) => {
+    console.log("1st Promise Resolved : ", data);
+    return getTodos("todos/aisyah.json");
+  })
+  .then((data) => {
+    console.log("2nd Promise Resolved : ", data);
+    return getTodos("todos/john.json");
+  })
+  .then((data) => {
+    console.log("3rd Promise Resolved : ", data);
+  })
   .catch((err) => console.log("promise rejected: ", err));
-
-//! Promises dummy example
-
-// const getSomething = () => {
-//   return new Promise((resolve, reject) => {
-//     // resolve("some data fetched");
-//     reject("error happened");
-//   });
-// };
-
-// getSomething().then(
-//   (data) => {
-//     console.log(data);
-//   },
-//   (err) => {
-//     console.log(err);
-//   }
-// );
-
-// getSomething()
-//   .then((data) => console.log(data))
-//   .catch((err) => console.log(err));
